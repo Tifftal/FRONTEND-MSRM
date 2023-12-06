@@ -1,0 +1,127 @@
+.page1 {
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.page1 h1 {
+    color: #0d6efd;
+    font-size: 180%;
+    margin: 2% 0;
+    font-family: 'Montserrat-semibold';
+    align-self: center;
+}
+
+.page1 p {
+    font-family: 'Montserrat-regular';
+}
+
+.card-menu {
+    width: 77vw;
+    border: none;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 19vw);
+    grid-template-rows: auto;
+    background-color: rgba(13, 109, 253, 0.1);
+    padding: 0.5vw;
+}
+
+.card {
+    margin: 0.5vw;
+    border-radius: 6px;
+    border: none;
+    outline: 1px solid rgba(13, 109, 253, 0.3);
+    outline-offset: 0px;
+}
+
+.text-card {
+    white-space: normal;
+}
+
+.card-title {
+    font-family: 'Montserrat-medium';
+}
+
+.card-btn {
+    font-family: 'Montserrat-medium';
+}
+
+.card-img {
+    width: 18vw;
+    height: 18vw;
+    border-radius: 6px 6px 0 0;
+    object-fit: cover;
+}
+
+.link-btn {
+    color: white;
+    text-decoration: none;
+}
+
+.main-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-block form {
+    width: 12vw;
+    margin-right: 1vw;
+    height: fit-content;
+    padding: 1%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(13, 109, 253, 0.1);
+}
+
+.main-block h5 {
+    color: #0d6efd;
+    font-size: 90%;
+    font-weight: 700;
+    margin-bottom: 10%;
+}
+
+.DropBtn {
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: .3s ease;
+    margin-top: 15%;
+    font-size: 90%;
+}
+
+.DropBtn:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.me-2 {
+    margin-right: 0 !important;
+}
+
+.bagBtn {
+    background: none;
+    border: none;
+    transition: .3s;
+    outline: none;
+}
+
+.bagBtn:hover {
+    background: none;
+    transform: scale(1.1);
+}
+
+.bagBtn img {
+    width: 20px;
+    height: auto;
+}
+
+.btnBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}

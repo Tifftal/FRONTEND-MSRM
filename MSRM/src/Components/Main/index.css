@@ -1,0 +1,130 @@
+.MainPage {
+    height: 100%;
+}
+
+#background-video {
+    top: 0;
+    left: 0;
+    height: 97vh;
+    width: 100vw;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+
+.cont {
+    position: absolute;
+    color: white;
+    z-index: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome {
+    position: absolute;
+    z-index: 0;
+    margin: auto;
+    height: auto;
+    width: auto;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px rgba(255, 255, 255, 0.05) solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5% 4%;
+}
+
+.welcome h1 {
+    font-family: "Montserrat-semibold";
+    text-transform: uppercase;
+    font-size: 220%;
+    margin: 0 0 5% 0;
+    text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.5);
+}
+
+.welcome a {
+    cursor: pointer;
+}
+
+.welcome button {
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(13, 110, 253);
+    width: 200px;
+    height: 30px;
+    font-size: 100%;
+    text-transform: uppercase;
+    font-family: "Montserrat-semibold";
+    font-weight: 700;
+}
+
+.facts {
+    position: absolute;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px rgba(255, 255, 255, 0.05) solid;
+    border-radius: 20px;
+    /* background: linear-gradient(to top, rgba(34, 34, 34, 0.8) 0%, rgba(34, 34, 34, 0.638) 19%, rgba(34, 34, 34, 0.541) 34%, rgba(34, 34, 34, 0.382) 47%, rgba(34, 34, 34, 0.278) 56.5%, rgba(34, 34, 34, 0.194) 65%, rgba(34, 34, 34, 0.126) 73%, rgba(34, 34, 34, 0.075) 80.2%, rgba(34, 34, 34, 0.042) 86.1%, rgba(34, 34, 34, 0.021) 91%, rgba(34, 34, 34, 0.008) 95.2%, rgba(34, 34, 34, 0.002) 98.2%, transparent 100%); */
+    color: white;
+    bottom: 5%;
+    left: -1vw;
+    width: 101vw;
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fact {
+    margin: 2% 0;
+}
+
+.fact h2 {
+    text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.5);
+    color: rgb(13, 110, 253);
+    font-family: "Montserrat-SemiBold";
+    text-transform: uppercase;
+    font-size: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+.fact p {
+    font-family: "Montserrat-Light";
+    margin: 5% 0;
+    padding: 0;
+    font-size: 160%;
+}
+
+.more {
+    cursor: pointer;
+    bottom: 0;
+    position: absolute;
+    color: white;
+    left: -1vw;
+    width: 101vw;
+    background-color: rgb(10, 76, 174);
+    border: none;
+    height: 5vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat-regular";
+    text-transform: uppercase;
+    font-size: 100%;
+}

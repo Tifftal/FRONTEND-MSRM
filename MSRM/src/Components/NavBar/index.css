@@ -1,0 +1,14 @@
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
+.link {
+    color: rgb(170, 199, 255);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.link:hover{
+    color: rgb(215, 228, 255);
+}

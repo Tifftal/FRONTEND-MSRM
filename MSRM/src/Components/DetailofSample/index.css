@@ -1,0 +1,84 @@
+.detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10% 0;
+    gap: 2%;
+}
+
+.card-det {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border-radius: 10px;
+    height: 40vh;
+}
+
+.header-det {
+    padding: 0;
+    align-self: center;
+}
+
+.header-det img {
+    width: 30vw;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.title-det {
+    color: #0d6efd;
+    font-size: 150%;
+    font-family: 'Montserrat-semibold';
+}
+
+.text-det {
+   width: 35vw;
+   font-family: 'Montserrat-regular';
+}
+
+.bread {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.bread-active {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.det {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+}
+
+
+.bagBtn-det {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    transition: .3s;
+    outline: none;
+    background-color: #0d6efd;
+    border-radius: 6px;
+    padding: 1% 2%;
+    color: white;
+}
+
+.bagBtn-det:hover {
+    background-color: rgb(12, 98, 227);
+
+}
+
+.bagBtn-det img {
+    width: 20px;
+    height: auto;
+    margin-right: 15px;
+    filter: invert(1);
+}
