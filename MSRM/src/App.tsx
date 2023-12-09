@@ -14,9 +14,9 @@ const App: FC = () => {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/MSRM/" element={<Main />} />
-          <Route path="/MSRM/samples" element={<Samples />} />
-          <Route path="/MSRM/detail/:id" element={<Detail />} />
+          <Route path="/FRONTEND-MSRM/" element={<Main />} />
+          <Route path="/FRONTEND-MSRM/samples" element={<Samples />} />
+          <Route path="/FRONTEND-MSRM/detail/:id" element={<Detail />} />
         </Routes>
       </BrowserRouter>
     </>

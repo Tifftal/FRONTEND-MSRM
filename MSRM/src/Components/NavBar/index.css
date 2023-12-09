@@ -12,3 +12,10 @@
 .link:hover{
     color: rgb(215, 228, 255);
 }
+
+.login-btn {
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    padding: 4px 20px;
+}

@@ -29,7 +29,7 @@ const Samples: FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`/api/api/sample/?name=&rockType=`);
+                const response = await fetch(`http://localhost:8080/api/sample/?name=&rockType=`);
                 const samplesData = await response.json();
 
                 const uniqueTypes = Array.from(new Set((samplesData as any[]).map((sample: any) => sample.Rock_Type as string)));
@@ -128,7 +128,7 @@ const Samples: FC = () => {
                                     </Card.Text>
                                     <div className='btnBar'>
                                         <Button className='card-btn' variant="primary">
-                                            <NavLink className="link-btn" to={`/MSRM/detail/${sample.Id_sample}`}>
+                                            <NavLink className="link-btn" to={`/FRONTEND-MSRM/detail/${sample.Id_sample}`}>
                                                 Узнать больше
                                             </NavLink>
                                         </Button>

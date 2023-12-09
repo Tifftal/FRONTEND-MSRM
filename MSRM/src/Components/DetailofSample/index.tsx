@@ -83,7 +83,7 @@ const Detail: FC = () => {
         if (currentIndex != undefined) {
             const nextIndex = currentIndex + 1;
             if (nextIndex < samples.length) {
-                navigate(`/MSRM/detail/${samples[nextIndex].Id_sample}`);
+                navigate(`/FRONTEND-MSRM/detail/${samples[nextIndex].Id_sample}`);
             }
         }
     };
@@ -93,7 +93,7 @@ const Detail: FC = () => {
         const prevIndex = currentIndex - 1;
 
         if (prevIndex >= 0) {
-            navigate(`/MSRM/detail/${samples[prevIndex].Id_sample}`);
+            navigate(`/FRONTEND-MSRM/detail/${samples[prevIndex].Id_sample}`);
         }
     };
 
@@ -114,8 +114,8 @@ const Detail: FC = () => {
 
     return (
         <div className='detail_page' style={{ paddingTop: 30, paddingBottom: 30 }}>
-            <NavLink to="/MSRM/" className='bread' style={{ marginLeft: 30 }}>Главная / </NavLink>
-            <NavLink to="/MSRM/samples" className='bread'>Образцы / </NavLink>
+            <NavLink to="/FRONTEND-MSRM/" className='bread' style={{ marginLeft: 30 }}>Главная / </NavLink>
+            <NavLink to="/FRONTEND-MSRM/samples" className='bread'>Образцы / </NavLink>
             <NavLink to="#" className='bread-active'>{sample.Name}</NavLink>
 
             <div className='detail'>

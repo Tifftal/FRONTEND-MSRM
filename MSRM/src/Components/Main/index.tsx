@@ -6,13 +6,12 @@ const Main: FC = () => {
     return (
         <div className="MainPage">
             <video id="background-video" preload="auto" no-controls autoPlay loop playsInline muted height="100%" width="100%">
-                {/* <source src="../../marsVideo.mp4" /> */}
-                <source src="/MSRM/marsVideo.mp4" />
+                <source src="/FRONTEND-MSRM/marsVideo.mp4" />
             </video>
             <div className="cont">
                 <div className="welcome">
                     <h1>Образцы грунта с Марса на Землю</h1>
-                    <NavLink to="/MSRM/samples"><button>к образцам</button></NavLink>
+                    <NavLink to="/FRONTEND-MSRM/samples"><button>к образцам</button></NavLink>
                 </div>
                 <div className="facts">
                     <div className="fact">

@@ -59,6 +59,10 @@
     text-decoration: none;
 }
 
+.link-btn:hover {
+    color: white;
+}
+
 .main-block {
     display: flex;
     flex-direction: row;

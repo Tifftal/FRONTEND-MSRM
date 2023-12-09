@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/MSRM',
+  base: '/FRONTEND-MSRM',
   plugins: [react()],
   server: {
     proxy: {
@@ -26,6 +26,8 @@ export default defineConfig({
       "@Shared": "/src/Shared",
       "@Hooks": "/src/Hooks",
       "@utils": "/src/utils",
+      "@Components": "/src/Components",
+      "@mock": "/src/mock",
     }
   }
 })
