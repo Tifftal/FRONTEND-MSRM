@@ -1,0 +1,19 @@
+.login {
+    margin: 3% 30%;
+    padding: 2% 3%;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+
+.login h1 {
+    font-family: 'Montserrat-semibold';
+    font-size: 180%;
+    margin-bottom: 5%;
+}
+
+.loginBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10%;
+}

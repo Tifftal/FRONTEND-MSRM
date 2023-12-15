@@ -1,0 +1,11 @@
+.missions {
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+}
+
+.list {
+    width: 82%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

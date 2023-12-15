@@ -78,21 +78,22 @@
     -webkit-backdrop-filter: blur(3px);
     background-color: rgba(0, 0, 0, 0.2);
     border: 1px rgba(255, 255, 255, 0.05) solid;
-    border-radius: 20px;
-    /* background: linear-gradient(to top, rgba(34, 34, 34, 0.8) 0%, rgba(34, 34, 34, 0.638) 19%, rgba(34, 34, 34, 0.541) 34%, rgba(34, 34, 34, 0.382) 47%, rgba(34, 34, 34, 0.278) 56.5%, rgba(34, 34, 34, 0.194) 65%, rgba(34, 34, 34, 0.126) 73%, rgba(34, 34, 34, 0.075) 80.2%, rgba(34, 34, 34, 0.042) 86.1%, rgba(34, 34, 34, 0.021) 91%, rgba(34, 34, 34, 0.008) 95.2%, rgba(34, 34, 34, 0.002) 98.2%, transparent 100%); */
     color: white;
     bottom: 5%;
-    left: -1vw;
-    width: 101vw;
-    height: 12vh;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    height: auto;
 }
 
 .fact {
-    margin: 2% 0;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 0;
 }
 
 .fact h2 {
@@ -107,7 +108,7 @@
 
 .fact p {
     font-family: "Montserrat-Light";
-    margin: 5% 0;
+    margin: 5px 0;
     padding: 0;
     font-size: 160%;
 }

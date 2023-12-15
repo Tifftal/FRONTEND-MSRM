@@ -3,8 +3,12 @@ import './index.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { NavLink } from 'react-router-dom';
-import { Form } from 'react-bootstrap';
+import { Form, Alert } from 'react-bootstrap';
 import sampleData from '../../mock/sampleMock';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../reduxToolkit/store';
+import { saveDraftMissionID } from '../../reduxToolkit/toolkitSlice';
 
 interface Sample {
     Id_sample: number;
@@ -21,40 +25,86 @@ interface Sample {
 }
 
 const Samples: FC = () => {
+    const draftID = useSelector((state: RootState) => state.toolkit.draftID)
+    const dispatch = useDispatch();
+
     const [samples, setSamples] = useState<Sample[] | undefined>();
     const [types, setTypes] = useState<string[]>([])
     const [searchQuery, setSearchQuery] = useState<string>('');
     const [selectedRockType, setSelectedRockType] = useState<string>('');
+    const [showAlert, setShowAlert] = useState(false);
+
+    const addToBag = (selectedSampleID: any) => {
+        axios.put(`/api/api/sample/to_mission/${selectedSampleID}`, {}, {
+            headers: {
+                Authorization: `Bearer ${window.localStorage.getItem("token")}`,
+            },
+        })
+            .then(response => {
+                console.log(response)
+                setShowAlert(true);
+                setTimeout(() => {
+                    setShowAlert(false);
+                }, 1500);
+                UpdateData();
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(`/api/api/sample/?name=&rockType=`);
-                const samplesData = await response.json();
-
-                const uniqueTypes = Array.from(new Set((samplesData as any[]).map((sample: any) => sample.Rock_Type as string)));
-                setTypes(uniqueTypes);
-
-            } catch (error) {
-                console.error('Не удалось подключиться к БД:', error);
-                setSamples(sampleData);
-                const uniqueTypes = Array.from(new Set((sampleData as any[]).map((sample: any) => sample.Rock_Type as string)));
-                setTypes(uniqueTypes);
+        axios.get(`/api/api/sample/?name=&rockType=`,
+            {
+                headers: {
+                    Authorization: `Bearer ${window.localStorage.getItem("token")}`,
+                },
             }
-        };
+        )
+            .then(response => {
+                dispatch(saveDraftMissionID(response.data.draftMission_id))
+                const samplesData = response.data.samples;
+                setSamples(samplesData);
 
-        fetchData();
+                const uniqueTypes: any[] = []
+                samplesData.map((sample: { Rock_Type: any; }) => {
+                    uniqueTypes.push(sample.Rock_Type)
+                })
+
+                const uniqueTypesSet = new Set(uniqueTypes);
+                const uniqueTypesArray = Array.from(uniqueTypesSet);
+
+                setTypes(uniqueTypesArray);
+            })
+            .catch(error => {
+                console.log('Не удалось подключиться к БД:', error);
+                setSamples(sampleData);
+                const uniqueTypes: any[] = []
+                sampleData.map((sample: { Rock_Type: any; }) => {
+                    uniqueTypes.push(sample.Rock_Type)
+                })
+
+                const uniqueTypesSet = new Set(uniqueTypes);
+                const uniqueTypesArray = Array.from(uniqueTypesSet);
+
+                setTypes(uniqueTypesArray);
+            })
     }, []);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(`http://localhost:8080/api/sample/?name=${searchQuery}&rockType=${selectedRockType}`);
-                const samplesData = await response.json();
+        axios.get(`/api/api/sample/?name=${searchQuery}&rockType=${selectedRockType}`,
+            {
+                headers: {
+                    Authorization: `Bearer ${window.localStorage.getItem("token")}`,
+                },
+            }
+        )
+            .then(response => {
+                const samplesData = response.data.samples;
                 setSamples(samplesData);
-
-            } catch (error) {
-                console.error('Не удалось подключиться к БД:', error);
+            })
+            .catch(error => {
+                console.log('Не удалось подключиться к БД:', error);
                 const data: SetStateAction<Sample[] | undefined> = [];
                 sampleData.map(sample => {
                     if (sample.Rock_Type === selectedRockType) {
@@ -65,20 +115,55 @@ const Samples: FC = () => {
                     }
                 });
                 setSamples(data);
-            }
-        };
-
-        fetchData();
-    }, [searchQuery, selectedRockType]);
-
+            })
+    }, [searchQuery, selectedRockType])
 
     const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedRockType(event.target.value);
     };
 
+    const UpdateData = () => {
+        axios.get(`/api/api/sample/?name=&rockType=`,
+            {
+                headers: {
+                    Authorization: `Bearer ${window.localStorage.getItem("token")}`,
+                },
+            }
+        )
+            .then(response => {
+                dispatch(saveDraftMissionID(response.data.draftMission_id))
+                const samplesData = response.data.samples;
+                setSamples(samplesData);
+
+                const uniqueTypes: any[] = []
+                samplesData.map((sample: { Rock_Type: any; }) => {
+                    uniqueTypes.push(sample.Rock_Type)
+                })
+
+                const uniqueTypesSet = new Set(uniqueTypes);
+                const uniqueTypesArray = Array.from(uniqueTypesSet);
+
+                setTypes(uniqueTypesArray);
+            })
+            .catch(error => {
+                console.log('Не удалось подключиться к БД:', error);
+                setSamples(sampleData);
+                const uniqueTypes: any[] = []
+                sampleData.map((sample: { Rock_Type: any; }) => {
+                    uniqueTypes.push(sample.Rock_Type)
+                })
+
+                const uniqueTypesSet = new Set(uniqueTypes);
+                const uniqueTypesArray = Array.from(uniqueTypesSet);
+
+                setTypes(uniqueTypesArray);
+            })
+    }
+
     return (
         <div className='page1'>
             <h1>Образцы марсианских пород, собранные марсоходом Perseverance</h1>
+            <div>Текущий DraftID: {draftID}</div>
             <p>
                 Марсоход НАСА Mars Perseverance собирает уникальную коллекцию камней, в которую входят образцы грунта Марса,
                 атмосфера и рыхлый поверхностный материал. Эти образцы отражают историю места приземления в кратере Джезеро, а также
@@ -99,7 +184,7 @@ const Samples: FC = () => {
                     <h5>Фильтр по типу:</h5>
                     {
                         types.map(type => (
-                            <div style={{ marginBottom: '5px' }}>
+                            <div style={{ marginBottom: '5px' }} key={type}>
                                 <input
                                     type='radio'
                                     id={type}
@@ -132,7 +217,11 @@ const Samples: FC = () => {
                                                 Узнать больше
                                             </NavLink>
                                         </Button>
-                                        <button className='bagBtn'><img src='bag.png' /></button>
+                                        {window.localStorage.getItem("token") ? (
+                                            <button className='bagBtn' onClick={() => addToBag(sample.Id_sample)}>
+                                                <img src='bag.png' alt="Bag" />
+                                            </button>
+                                        ) : null}
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -142,6 +231,11 @@ const Samples: FC = () => {
                     )}
                 </div>
             </div>
+            {showAlert && (
+                <Alert key="warning" variant="warning" className='alert'>
+                    Образец успешно добавлен в корзину!
+                </Alert>
+            )}
         </div>
     );
 };

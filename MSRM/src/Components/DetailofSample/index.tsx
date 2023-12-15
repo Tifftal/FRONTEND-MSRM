@@ -3,6 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import './index.css';
 import sampleData from '../../mock/sampleMock';
+import axios from 'axios';
 
 interface Sample {
     Id_sample: number;
@@ -22,19 +23,23 @@ const Detail: FC = () => {
     const { id } = useParams<{ id: string }>();
     const [sample, setSample] = useState<Sample>();
     const navigate = useNavigate();
+    const [samples, setSamples] = useState<Sample[]>([]);
 
     const getSampleById = async (id: string | undefined): Promise<Sample | null> => {
         try {
-            const response = await fetch(`http://localhost:8080/api/sample/${id}`);
+            const response = await axios.get(`/api/api/sample/${id}`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${window.localStorage.getItem("token")}`,
+                    },
+                }
+            );
 
-            if (!response.ok) {
+            if (!response.data) {
                 console.error('Ошибка при получении данных с сервера:', response.statusText);
                 return null;
             }
-
-            const responseData = await response.json();
-
-            return responseData;
+            return response.data;
         } catch (error) {
             console.error('Не удалось подключиться к БД:', error);
             const sampleFromData = sampleData.find((sample) => sample.Id_sample.toString() === id);
@@ -42,14 +47,16 @@ const Detail: FC = () => {
         }
     };
 
-    const [samples, setSamples] = useState<Sample[]>([]);
-
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/api/sample/`);
-                const samplesData = await response.json();
-                console.log(samplesData);
+                const response = await axios.get('/api/api/sample/',
+                    {
+                        headers: {
+                            Authorization: `Bearer ${window.localStorage.getItem("token")}`,
+                        },
+                    });
+                const samplesData = response.data.samples;
                 setSamples(samplesData);
             } catch (error) {
                 console.error('Не удалось подключиться к БД:', error);
@@ -108,7 +115,7 @@ const Detail: FC = () => {
             year: 'numeric',
         };
 
-        const formattedDate = new Date(dateString).toLocaleDateString('en-US', options);
+        const formattedDate = new Date(dateString).toLocaleDateString('ru-RU', options);
         return `Дата сбора: ${formattedDate}`;
     };
 
@@ -138,7 +145,11 @@ const Detail: FC = () => {
                                 {`Количество собранного материала: ${sample.Sol_Sealed}`} <br />
                             </Card.Text>
                         </div>
-                        <button className='bagBtn-det'><img src='../bag.png' /> Добавить в корзину</button>
+                        {
+                            window.localStorage.getItem("token") ?
+                                <button className='bagBtn-det'><img src='../bag.png' /> Добавить в корзину</button>
+                                : null
+                        }
                     </Card.Body>
                 </Card>
                 <Button variant="primary" onClick={handleNext}>
