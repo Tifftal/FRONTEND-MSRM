@@ -27,14 +27,14 @@ const NavBar: FC = () => {
                     <Nav className="me-auto">
                         <Nav.Link><NavLink className="link" to='/MSRM/'>Главная</NavLink></Nav.Link>
                         <Nav.Link><NavLink className="link" to='/MSRM/samples'>Образцы</NavLink></Nav.Link>
-                        {
+                        {/* {
                             window.localStorage.getItem("token") ?
                                 <Nav.Link><NavLink className="link" to='/MSRM/missions'>Мои заказы</NavLink></Nav.Link>
                                 : null
-                        }
+                        } */}
 
                     </Nav>
-                    {
+                    {/* {
                         window.localStorage.getItem("token") ?
                             <div>
                                 {
@@ -48,12 +48,12 @@ const NavBar: FC = () => {
                                 }
                             </div>
                             : null
-                    }
-                    {
+                    } */}
+                    {/* {
                         window.localStorage.getItem("token") ?
                             <Button variant="primary" size="sm" onClick={Logout}>Выйти</Button>
                             : <NavLink to='/MSRM/login' classname="loginBtn-navbar"><Button variant="primary" size="sm">Войти</Button></NavLink>
-                    }
+                    } */}
 
                 </Navbar.Collapse>
             </Container>
