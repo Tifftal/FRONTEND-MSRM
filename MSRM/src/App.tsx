@@ -11,6 +11,7 @@ import Bag from './Components/Bag';
 import { Provider } from 'react-redux';
 import { store } from './reduxToolkit';
 import Login from './Components/Login';
+import Auth from './Components/Auth';
 
 const App: FC = () => {
 
@@ -26,6 +27,7 @@ const App: FC = () => {
             <Route path="/MSRM/missions" element={<Missions />} />
             <Route path="/MSRM/bag" element={<Bag />} />
             <Route path="/MSRM/login" element={<Login />} />
+            <Route path="/MSRM/auth" element={<Auth />} />
           </Routes>
         </BrowserRouter>
       </Provider>

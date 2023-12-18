@@ -1,0 +1,12 @@
+.registr {
+    margin: 3% 30%;
+    padding: 2% 3%;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+
+.registr h1 {
+    font-family: 'Montserrat-semibold';
+    font-size: 180%;
+    margin-bottom: 5%;
+}

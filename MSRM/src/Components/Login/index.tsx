@@ -2,7 +2,7 @@ import { Button, Form, Modal } from 'react-bootstrap';
 import { FC, useEffect, useState } from 'react';
 import axios from 'axios';
 import './index.css'
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 const Login: FC = () => {
@@ -66,9 +66,11 @@ const Login: FC = () => {
                         <Button variant="primary" onClick={Login}>
                             Войти
                         </Button>
-                        <Button variant="outline-secondary">
-                            Зарегистрироваться
-                        </Button>
+                        <NavLink to="/MSRM/auth">
+                            <Button variant="outline-secondary">
+                                Зарегистрироваться
+                            </Button>
+                        </NavLink>
                     </div>
                 </Form>
             </div>

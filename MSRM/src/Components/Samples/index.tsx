@@ -8,7 +8,8 @@ import sampleData from '../../mock/sampleMock';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../reduxToolkit/store';
-import { saveDraftMissionID } from '../../reduxToolkit/toolkitSlice';
+import { saveDraftMissionID, saveFilterType, saveSearch } from '../../reduxToolkit/toolkitSlice';
+import { useSamples } from '../../features/useSamples';
 
 interface Sample {
     Id_sample: number;
@@ -26,32 +27,19 @@ interface Sample {
 
 const Samples: FC = () => {
     const draftID = useSelector((state: RootState) => state.toolkit.draftID)
+    const search = useSelector((state: RootState) => state.toolkit.search)
+    const rockType = useSelector((state: RootState) => state.toolkit.type)
     const dispatch = useDispatch();
-
     const [samples, setSamples] = useState<Sample[] | undefined>();
     const [types, setTypes] = useState<string[]>([])
-    const [searchQuery, setSearchQuery] = useState<string>('');
-    const [selectedRockType, setSelectedRockType] = useState<string>('');
-    const [showAlert, setShowAlert] = useState(false);
 
-    const addToBag = (selectedSampleID: any) => {
-        axios.put(`/api/api/sample/to_mission/${selectedSampleID}`, {}, {
-            headers: {
-                Authorization: `Bearer ${window.localStorage.getItem("token")}`,
-            },
-        })
-            .then(response => {
-                console.log(response)
-                setShowAlert(true);
-                setTimeout(() => {
-                    setShowAlert(false);
-                }, 1500);
-                UpdateData();
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
+    const {
+        handleRadioChange,
+        searchSaving,
+        addToBag,
+        showAlert,
+    } = useSamples();
+
 
     useEffect(() => {
         axios.get(`/api/api/sample/?name=&rockType=`,
@@ -62,9 +50,10 @@ const Samples: FC = () => {
             }
         )
             .then(response => {
+                console.log(response.data)
                 dispatch(saveDraftMissionID(response.data.draftMission_id))
                 const samplesData = response.data.samples;
-                setSamples(samplesData);
+                // setSamples(samplesData);
 
                 const uniqueTypes: any[] = []
                 samplesData.map((sample: { Rock_Type: any; }) => {
@@ -78,7 +67,7 @@ const Samples: FC = () => {
             })
             .catch(error => {
                 console.log('Не удалось подключиться к БД:', error);
-                setSamples(sampleData);
+                // setSamples(sampleData);
                 const uniqueTypes: any[] = []
                 sampleData.map((sample: { Rock_Type: any; }) => {
                     uniqueTypes.push(sample.Rock_Type)
@@ -92,7 +81,7 @@ const Samples: FC = () => {
     }, []);
 
     useEffect(() => {
-        axios.get(`/api/api/sample/?name=${searchQuery}&rockType=${selectedRockType}`,
+        axios.get(`/api/api/sample/?name=${search}&rockType=${rockType}`,
             {
                 headers: {
                     Authorization: `Bearer ${window.localStorage.getItem("token")}`,
@@ -107,58 +96,16 @@ const Samples: FC = () => {
                 console.log('Не удалось подключиться к БД:', error);
                 const data: SetStateAction<Sample[] | undefined> = [];
                 sampleData.map(sample => {
-                    if (sample.Rock_Type === selectedRockType) {
+                    if (sample.Rock_Type === rockType) {
                         data.push(sample);
                     }
-                    else if (selectedRockType === '') {
+                    else if (rockType === '') {
                         data.push(sample);
                     }
                 });
                 setSamples(data);
             })
-    }, [searchQuery, selectedRockType])
-
-    const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSelectedRockType(event.target.value);
-    };
-
-    const UpdateData = () => {
-        axios.get(`/api/api/sample/?name=&rockType=`,
-            {
-                headers: {
-                    Authorization: `Bearer ${window.localStorage.getItem("token")}`,
-                },
-            }
-        )
-            .then(response => {
-                dispatch(saveDraftMissionID(response.data.draftMission_id))
-                const samplesData = response.data.samples;
-                setSamples(samplesData);
-
-                const uniqueTypes: any[] = []
-                samplesData.map((sample: { Rock_Type: any; }) => {
-                    uniqueTypes.push(sample.Rock_Type)
-                })
-
-                const uniqueTypesSet = new Set(uniqueTypes);
-                const uniqueTypesArray = Array.from(uniqueTypesSet);
-
-                setTypes(uniqueTypesArray);
-            })
-            .catch(error => {
-                console.log('Не удалось подключиться к БД:', error);
-                setSamples(sampleData);
-                const uniqueTypes: any[] = []
-                sampleData.map((sample: { Rock_Type: any; }) => {
-                    uniqueTypes.push(sample.Rock_Type)
-                })
-
-                const uniqueTypesSet = new Set(uniqueTypes);
-                const uniqueTypesArray = Array.from(uniqueTypesSet);
-
-                setTypes(uniqueTypesArray);
-            })
-    }
+    }, [search, rockType])
 
     return (
         <div className='page1'>
@@ -174,9 +121,10 @@ const Samples: FC = () => {
                 <Form.Control
                     type="search"
                     placeholder="Поиск"
+                    value={search}
                     className="me-2"
                     aria-label="Search"
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e) => searchSaving(e)}
                 />
             </Form>
             <div className='main-block'>
@@ -189,7 +137,7 @@ const Samples: FC = () => {
                                     type='radio'
                                     id={type}
                                     value={type}
-                                    checked={selectedRockType === `${type}`}
+                                    checked={rockType === `${type}`}
                                     onChange={handleRadioChange}
                                     style={{ marginRight: '7px', transform: 'scale(1.2)' }}
                                 />
@@ -197,7 +145,7 @@ const Samples: FC = () => {
                             </div>
                         ))
                     }
-                    <button className='DropBtn' type="button" onClick={() => setSelectedRockType('')}>
+                    <button className='DropBtn' type="button" onClick={() => dispatch(saveFilterType(""))}>
                         Сбросить
                     </button>
                 </form>

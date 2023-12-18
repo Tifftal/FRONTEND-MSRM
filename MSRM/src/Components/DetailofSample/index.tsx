@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Alert, Button, Card } from 'react-bootstrap';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import './index.css';
 import sampleData from '../../mock/sampleMock';
@@ -24,6 +24,7 @@ const Detail: FC = () => {
     const [sample, setSample] = useState<Sample>();
     const navigate = useNavigate();
     const [samples, setSamples] = useState<Sample[]>([]);
+    const [showAlert, setShowAlert] = useState(false);
 
     const getSampleById = async (id: string | undefined): Promise<Sample | null> => {
         try {
@@ -119,6 +120,24 @@ const Detail: FC = () => {
         return `Дата сбора: ${formattedDate}`;
     };
 
+    const addToBag = (selectedSampleID: any) => {
+        axios.put(`/api/api/sample/to_mission/${selectedSampleID}`, {}, {
+            headers: {
+                Authorization: `Bearer ${window.localStorage.getItem("token")}`,
+            },
+        })
+            .then(response => {
+                console.log(response)
+                setShowAlert(true);
+                setTimeout(() => {
+                    setShowAlert(false);
+                }, 1500);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
     return (
         <div className='detail_page' style={{ paddingTop: 30, paddingBottom: 30 }}>
             <NavLink to="/MSRM/" className='bread' style={{ marginLeft: 30 }}>Главная / </NavLink>
@@ -147,7 +166,7 @@ const Detail: FC = () => {
                         </div>
                         {
                             window.localStorage.getItem("token") ?
-                                <button className='bagBtn-det'><img src='../bag.png' /> Добавить в корзину</button>
+                                <button className='bagBtn-det' onClick={() => addToBag(sample.Id_sample)}><img src='../bag.png' /> Добавить в корзину</button>
                                 : null
                         }
                     </Card.Body>
@@ -156,6 +175,11 @@ const Detail: FC = () => {
                     Вперед
                 </Button>
             </div>
+            {showAlert && (
+                <Alert key="warning" variant="warning" className='alert'>
+                    Образец успешно добавлен в корзину!
+                </Alert>
+            )}
         </div>
     );
 };
