@@ -4,13 +4,23 @@ import { FC, useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import sampleData from '../../mock/sampleMock';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../reduxToolkit/store';
 
 const NavBar: FC = () => {
+
+    const location = useLocation();
+
+    // Укажите целевой путь для страницы "Образец"
+    const targetPath = '/MSRM/samples';
+
+    // Проверка, соответствует ли текущий путь целевому
+    const isTargetPage = location.pathname === targetPath;
+
+
     const draftID = useSelector((state: RootState) => state.toolkit.draftID)
 
     const Logout = () => {
@@ -34,21 +44,26 @@ const NavBar: FC = () => {
                         }
 
                     </Nav>
+
                     {
-                        window.localStorage.getItem("token") ?
-                            <div>
-                                {
-                                    draftID !== 0 ?
-                                        <NavLink to="/MSRM/bag" className="bagBtnNavbar">
-                                            <img src='bag.png' />Корзина
-                                        </NavLink>
-                                        : <NavLink to="#" className="bagBtnNavbar disabled">
-                                            <img src='bag.png' />Корзина
-                                        </NavLink>
-                                }
-                            </div>
-                            : null
+                        isTargetPage ? (
+                            window.localStorage.getItem("token") ?
+                                <div>
+                                    {
+                                        draftID !== 0 ?
+                                            <NavLink to="/MSRM/bag" className="bagBtnNavbar">
+                                                <img src='bag.png' />Корзина
+                                            </NavLink>
+                                            : <NavLink to="#" className="bagBtnNavbar disabled">
+                                                <img src='bag.png' />Корзина
+                                            </NavLink>
+                                    }
+                                </div>
+                                : null
+                        ) : null
                     }
+
+
                     {
                         window.localStorage.getItem("token") ?
                             <Button variant="primary" size="sm" onClick={Logout}>Выйти</Button>

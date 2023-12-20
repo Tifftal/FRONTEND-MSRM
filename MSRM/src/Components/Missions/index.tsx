@@ -3,6 +3,7 @@ import MissionList from '../../widgets/missions_list';
 import FilterDate from '../../shared/filter_mission';
 import "./index.css"
 import axios from 'axios';
+import { Table } from 'react-bootstrap';
 
 interface Mission {
     Formation_date: string;
@@ -40,20 +41,31 @@ const Missions: FC = () => {
                 onEndDateChange={(date) => setEndDate(date)}
             />
             <div className='list'>
-                {
-                    data.map((mission, index) => (
-                        mission.Mission_status !== "Draft" && mission.Mission_status !== "Deleted" ? (
-                            <MissionList
-                                key={index}
-                                dateFormation={mission.Formation_date}
-                                status={mission.Mission_status}
-                                ID={mission.Id_mission}
-                                name={name}
-                            />
-                        ) : null
-                    ))
-                }
-
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th style={{backgroundColor: "rgba(13, 109, 253, 0.5)"}}>№</th>
+                            <th style={{backgroundColor: "rgba(13, 109, 253, 0.5)"}}>Дата заказа</th>
+                            <th style={{backgroundColor: "rgba(13, 109, 253, 0.5)"}}>Имя</th>
+                            <th style={{backgroundColor: "rgba(13, 109, 253, 0.5)"}}>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data.map((mission, index) => (
+                                mission.Mission_status !== "Draft" && mission.Mission_status !== "Deleted" ? (
+                                    <MissionList
+                                        key={index}
+                                        dateFormation={mission.Formation_date}
+                                        status={mission.Mission_status}
+                                        ID={mission.Id_mission}
+                                        name={name}
+                                    />
+                                ) : null
+                            ))
+                        }
+                    </tbody>
+                </Table>
             </div>
         </div>
     );

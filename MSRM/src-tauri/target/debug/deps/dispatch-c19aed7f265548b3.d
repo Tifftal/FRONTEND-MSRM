@@ -1,0 +1,12 @@
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/libdispatch-c19aed7f265548b3.rmeta: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/ffi.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/group.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/queue.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/once.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/sem.rs
+
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/libdispatch-c19aed7f265548b3.rlib: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/ffi.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/group.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/queue.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/once.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/sem.rs
+
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/dispatch-c19aed7f265548b3.d: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/ffi.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/group.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/queue.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/once.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/sem.rs
+
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/lib.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/ffi.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/group.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/queue.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/once.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/dispatch-0.2.0/src/sem.rs:

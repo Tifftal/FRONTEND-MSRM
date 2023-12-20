@@ -1,0 +1,11 @@
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/libcrc32fast-f893fd07fcac1a27.rmeta: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/baseline.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/combine.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/specialized/mod.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/table.rs
+
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/libcrc32fast-f893fd07fcac1a27.rlib: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/baseline.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/combine.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/specialized/mod.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/table.rs
+
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/crc32fast-f893fd07fcac1a27.d: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/baseline.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/combine.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/specialized/mod.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/table.rs
+
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/lib.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/baseline.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/combine.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/specialized/mod.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.3.2/src/table.rs:

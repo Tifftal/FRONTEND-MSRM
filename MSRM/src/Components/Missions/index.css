@@ -6,6 +6,12 @@
 
 .list {
     width: 82%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+}
+
+.table {
+    cursor: pointer;
+    --bs-table-hover-bg: rgba(13, 109, 253, 0.2);
+    --bs-table-striped-bg: rgba(13, 109, 253, 0.1);
 }

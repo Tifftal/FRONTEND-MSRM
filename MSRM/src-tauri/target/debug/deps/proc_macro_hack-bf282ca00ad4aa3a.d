@@ -1,0 +1,9 @@
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/libproc_macro_hack-bf282ca00ad4aa3a.dylib: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/quote.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/error.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/iter.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/parse.rs
+
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/proc_macro_hack-bf282ca00ad4aa3a.d: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/quote.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/error.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/iter.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/parse.rs
+
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/lib.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/quote.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/error.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/iter.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro-hack-0.5.20+deprecated/src/parse.rs:

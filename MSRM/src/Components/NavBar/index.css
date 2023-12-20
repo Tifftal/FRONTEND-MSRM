@@ -19,22 +19,30 @@
     align-items: center;
     margin-right: 50px;
     text-decoration: none;
-    color: white;
-    /* background-color: #0d6efd;
+    color: rgb(255, 217, 0);
     padding: 0.25rem 0.5rem;
-    border-radius: var(--bs-border-radius-sm); */
+    border-radius: var(--bs-border-radius-sm);
+    transition: .3s;
 }
 
 .bagBtnNavbar img {
     margin-right: 10px;
-    width: 20px;
-    height: 20px;
-    filter: invert(1);
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 217, 0);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .disabled {
+    background-color: #64646467;
     color: rgb(179, 179, 179);
     cursor: default;
+
+}
+
+.disabled img {
+    background-color: transparent;
 }
 
 .disabled img {
@@ -43,4 +51,5 @@
 
 .loginBtn-navbar {
     border: none;
+    font-size: 100%;
 }

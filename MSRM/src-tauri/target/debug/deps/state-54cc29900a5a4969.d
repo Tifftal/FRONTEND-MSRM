@@ -1,0 +1,12 @@
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/libstate-54cc29900a5a4969.rmeta: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/ident_hash.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/storage.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/init.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/shim.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/container.rs
+
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/libstate-54cc29900a5a4969.rlib: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/ident_hash.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/storage.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/init.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/shim.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/container.rs
+
+/Users/vaarty/FRONTEND-MSRM/MSRM/src-tauri/target/debug/deps/state-54cc29900a5a4969.d: /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/lib.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/ident_hash.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/storage.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/init.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/shim.rs /Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/container.rs
+
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/lib.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/ident_hash.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/storage.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/init.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/shim.rs:
+/Users/vaarty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/state-0.5.3/src/container.rs:
