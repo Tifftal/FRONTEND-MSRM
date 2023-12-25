@@ -3,6 +3,8 @@ import './index.css';
 import { NavLink } from 'react-router-dom';
 
 const Main: FC = () => {
+    const token = window.localStorage.getItem("token");
+    const decodedToken = token ? JSON.parse(atob(token.split('.')[1])) : 'Guest';
     return (
         <div className="MainPage">
             <video id="background-video" preload="auto" no-controls autoPlay loop playsInline muted height="100%" width="100%">
@@ -12,7 +14,11 @@ const Main: FC = () => {
             <div className="cont">
                 <div className="welcome">
                     <h1>Образцы грунта с Марса на Землю</h1>
-                    <NavLink to="/MSRM/samples"><button>к образцам</button></NavLink>
+                    {
+                        decodedToken.role === 'Moderator' ?
+                            <NavLink to="/MSRM/admin/samples"><button>к образцам</button></NavLink>
+                            : <NavLink to="/MSRM/samples"><button>к образцам</button></NavLink>
+                    }
                 </div>
                 <div className="facts">
                     <div className="fact">

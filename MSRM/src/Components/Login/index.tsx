@@ -29,8 +29,11 @@ const Login: FC = () => {
             .then(response => {
                 console.log(response);
                 window.localStorage.setItem("token", response.data);
-                navigate("/MSRM/samples");
-                window.location.reload();
+                const token = window.localStorage.getItem("token");
+                const decodedToken = token ? JSON.parse(atob(token.split('.')[1])) : 'Guest';
+                console.log(decodedToken);
+                decodedToken.role === "User" ? navigate("/MSRM/samples"): null;
+                decodedToken.role === "Moderator" ? navigate("/MSRM/admin/samples"): null;
             })
             .catch(error => (
                 console.log(error)

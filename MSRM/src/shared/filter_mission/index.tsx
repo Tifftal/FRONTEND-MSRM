@@ -36,20 +36,22 @@ const FilterDate: FC<FilterDateProps> = ({ onStartDateChange, onEndDateChange })
     };
 
     return (
-        <div className='filter-mission'>
-            <h1>Фильтр по дате заказа</h1>
-            <div className='filter-input'>
-                <label>С</label>
-                <input type='date' value={startDate} onChange={handleStartDateChange} max={getCurrentDate()} />
+        <>
+            <div className='filter-mission'>
+                <h1>Фильтр по дате формирования</h1>
+                <div className='filter-input'>
+                    <label>С</label>
+                    <input type='date' value={startDate} onChange={handleStartDateChange} max={getCurrentDate()} />
+                </div>
+                <div className='filter-input'>
+                    <label>До</label>
+                    <input type='date' value={endDate} onChange={handleEndDateChange} max={getCurrentDate()} />
+                </div>
+                <button className='filterBtn' type="button" onClick={handleReset}>
+                    Сбросить
+                </button>
             </div>
-            <div className='filter-input'>
-                <label>До</label>
-                <input type='date' value={endDate} onChange={handleEndDateChange} max={getCurrentDate()} />
-            </div>
-            <button className='filterBtn' type="button" onClick={handleReset}>
-                Сбросить
-            </button>
-        </div>
+        </>
     );
 };
 

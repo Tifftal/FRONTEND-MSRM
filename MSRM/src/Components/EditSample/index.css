@@ -1,0 +1,82 @@
+.edit-sample {
+    padding: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-sample h1 {
+    color: #0d6efd;
+    font-size: 180%;
+    margin: 2% 0;
+    font-family: 'Montserrat-semibold';
+    align-self: center;
+}
+
+.card-det-mod {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border-radius: 10px;
+    height: 50vh;
+}
+
+.header-det-mod {
+    padding: 0;
+    align-self: center;
+}
+
+.header-det-mod img {
+    width: 30vw;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.title-det-mod {
+    color: #0d6efd;
+    font-size: 140%;
+    font-family: 'Montserrat-semibold';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+
+}
+
+.text-det-mod {
+    font-family: 'Montserrat-regular';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.edit-sample input {
+    border: none;
+    border-bottom: 2px solid rgb(13, 110, 253, 0.5);
+    border-radius: 0;
+    width: max-content;
+}
+
+.edit-sample input:focus {
+    outline: none;
+}
+
+.det-mod {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.bread-bar {
+    padding: 2vw 0 0 2vw;
+}

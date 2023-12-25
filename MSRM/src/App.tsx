@@ -12,6 +12,8 @@ import { Provider } from 'react-redux';
 import { store } from './reduxToolkit';
 import Login from './Components/Login';
 import Auth from './Components/Auth';
+import SampleMod from './Components/SampleMod';
+import EditSample from './Components/EditSample';
 
 const App: FC = () => {
 
@@ -25,9 +27,11 @@ const App: FC = () => {
             <Route path="/MSRM/samples" element={<Samples />} />
             <Route path="/MSRM/detail/:id" element={<Detail />} />
             <Route path="/MSRM/missions" element={<Missions />} />
-            <Route path="/MSRM/bag" element={<Bag />} />
+            <Route path="/MSRM/mission/detail/:id" element={<Bag />} />
             <Route path="/MSRM/login" element={<Login />} />
             <Route path="/MSRM/auth" element={<Auth />} />
+            <Route path="/MSRM/admin/samples" element={<SampleMod />} />
+            <Route path="/MSRM/admin/edit_sample/:id" element={<EditSample />} />
           </Routes>
         </BrowserRouter>
       </Provider>

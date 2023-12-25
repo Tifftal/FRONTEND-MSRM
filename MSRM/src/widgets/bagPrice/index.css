@@ -1,5 +1,6 @@
 .bag-price {
     width: 30%;
+    height: fit-content;
 }
 
 .title-price {

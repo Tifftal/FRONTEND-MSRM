@@ -9,6 +9,27 @@
     transition: .3s;
 }
 
+.nav-link {
+    color: rgb(170, 199, 255);
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: rgb(215, 228, 255);
+}
+
+.navbar-nav .nav-link.show {
+    color: rgb(215, 228, 255);
+}
+
+.dropdown-menu {
+    --bs-dropdown-bg: rgb(43,48,53);
+    border: none;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(57, 61, 66);
+}
+
 .link:hover {
     color: rgb(215, 228, 255);
 }
