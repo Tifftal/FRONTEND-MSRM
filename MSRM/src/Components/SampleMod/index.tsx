@@ -252,7 +252,7 @@ const SampleMod: FC = () => {
                                     <td className='edit-btn' style={{ textAlign: "center" }}><button onClick={() => { navigate(`/MSRM/admin/edit_sample/${sample.Id_sample}`) }}><img src='../icons8-редактировать-96.png' /></button></td>
                                     <td>{sample.Id_sample}</td>
                                     <td>{sample.Name}</td>
-                                    <td className='img-table'><img src={`${sample.Image}`} /><button onClick={() => { handleShow(sample.Id_sample) }}>Изменить</button></td>
+                                    <td className='img-table'><img src={`${sample.Image}`} /></td>
                                     <td>{sample.Type}</td>
                                     <td>{sample.Rock_Type}</td>
                                     <td>{sample.Height}</td>

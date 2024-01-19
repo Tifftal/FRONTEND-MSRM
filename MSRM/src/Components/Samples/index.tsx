@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../reduxToolkit/store';
 import { saveDraftMissionID, saveFilterType, saveSearch } from '../../reduxToolkit/toolkitSlice';
 import { useSamples } from '../../features/useSamples';
+import coal from '../../assets/coal.png';
 
 interface Sample {
     Id_sample: number;
@@ -153,7 +154,12 @@ const Samples: FC = () => {
                     {samples ? (
                         samples.map((sample) => (
                             <Card key={sample.Id_sample} className="card">
-                                <Card.Img className='card-img' variant="top" src={sample.Image || 'coal.png'} />
+                                {
+                                    sample.Image == ''? 
+                                    <Card.Img className='card-img' variant="top" src={coal} />
+                                    : <Card.Img className='card-img' variant="top" src={sample.Image} />
+                                }
+                                {/* <Card.Img className='card-img' variant="top" src={sample.Image} /> */}
                                 <Card.Body>
                                     <Card.Title className='card-title'>{sample.Name}</Card.Title>
                                     <Card.Text className='text-card'>
