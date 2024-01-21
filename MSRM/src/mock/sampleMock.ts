@@ -1,3 +1,5 @@
+import coal from '../assets/coal.png'
+
 const sampleData = [
   {
     Id_sample: 18,
@@ -8,21 +10,8 @@ const sampleData = [
     Rock_Type: "Смешанный",
     Height: "5.3 cm/2.09 in",
     Current_Location: "Sample Depot",
-    Image: "http://localhost:9000/images-bucket/sample/18/image",
+    Image: coal,
     Video: "Video18",
-    Sample_status: "Active"
-  },
-  {
-    Id_sample: 17,
-    Name: "Atmo Mountain",
-    Type: "Реголит",
-    Date_Sealed: "2022-12-02T00:00:00Z",
-    Sol_Sealed: 634,
-    Rock_Type: "Смешанный",
-    Height: "5.3 cm/2.09 in",
-    Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/17/image",
-    Video: "Video17",
     Sample_status: "Active"
   },
   {
@@ -34,7 +23,7 @@ const sampleData = [
     Rock_Type: "Магматический",
     Height: "5.98 cm/2.35 in",
     Current_Location: "Sample Depot",
-    Image: "http://localhost:9000/images-bucket/sample/2/image",
+    Image: coal,
     Video: "Video2",
     Sample_status: "Active"
   },
@@ -47,7 +36,7 @@ const sampleData = [
     Rock_Type: "Магматический",
     Height: "6.28 cm/2.47 in",
     Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/4/image",
+    Image: coal,
     Video: "Video4",
     Sample_status: "Active"
   },
@@ -60,7 +49,7 @@ const sampleData = [
     Rock_Type: "Осадочный",
     Height: "5.85 cm/2.30 in",
     Current_Location: "Sample Depot",
-    Image: "http://localhost:9000/images-bucket/sample/11/image",
+    Image: coal,
     Video: "Video11",
     Sample_status: "Active"
   },
@@ -73,7 +62,7 @@ const sampleData = [
     Rock_Type: "Осадочный",
     Height: "5.97 cm/2.35 in",
     Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/12/image",
+    Image: coal,
     Video: "Video12",
     Sample_status: "Active"
   },
@@ -86,7 +75,7 @@ const sampleData = [
     Rock_Type: "Осадочный",
     Height: "6.24 cm/2.46 in",
     Current_Location: "Sample Depot",
-    Image: "http://localhost:9000/images-bucket/sample/13/image",
+    Image: coal,
     Video: "Video13",
     Sample_status: "Active"
   },
@@ -99,7 +88,7 @@ const sampleData = [
     Rock_Type: "Магматический",
     Height: "3.07 cm/1.21 in",
     Current_Location: "Sample Depot",
-    Image: "http://localhost:9000/images-bucket/sample/7/image",
+    Image: coal,
     Video: "Video7",
     Sample_status: "Active"
   },
@@ -112,7 +101,7 @@ const sampleData = [
     Rock_Type: "Осадочный",
     Height: "5.55 cm/2.19 in",
     Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/14/image",
+    Image: coal,
     Video: "Video14",
     Sample_status: "Active"
   },
@@ -125,7 +114,7 @@ const sampleData = [
     Rock_Type: "Осадочный",
     Height: "7.36 cm/2.90 in",
     Current_Location: "Sample Depot",
-    Image: "http://localhost:9000/images-bucket/sample/15/image",
+    Image: coal,
     Video: "Video15",
     Sample_status: "Active"
   },
@@ -138,7 +127,7 @@ const sampleData = [
     Rock_Type: "Осадочный",
     Height: "4.97 cm/1.96 in",
     Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/16/image",
+    Image: coal,
     Video: "Video16",
     Sample_status: "Active"
   },
@@ -151,7 +140,7 @@ const sampleData = [
     Rock_Type: "Магматический",
     Height: "6.08 cm/2.39 in",
     Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/6/image",
+    Image: coal,
     Video: "Video6",
     Sample_status: "Active"
   },
@@ -164,7 +153,7 @@ const sampleData = [
     Rock_Type: "Магматический",
     Height: "6.0 cm/2.36 in",
     Current_Location: "Sample Depot",
-    Image: "http://localhost:9000/images-bucket/sample/9/image",
+    Image: coal,
     Video: "Video9",
     Sample_status: "Active"
   },
@@ -177,7 +166,7 @@ const sampleData = [
     Rock_Type: "Магматический",
     Height: "6.5 cm/2.56 in",
     Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/8/image",
+    Image: coal,
     Video: "Video8",
     Sample_status: "Active"
   },
@@ -190,7 +179,7 @@ const sampleData = [
     Rock_Type: "Магматический",
     Height: "6.14 cm/2.42 in",
     Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/3/image",
+    Image: coal,
     Video: "Video3",
     Sample_status: "Active"
   },
@@ -203,7 +192,7 @@ const sampleData = [
     Rock_Type: "Магматический",
     Height: "3.3 cm/1.30 in",
     Current_Location: "Sample Depot",
-    Image: "http://localhost:9000/images-bucket/sample/5/image",
+    Image: coal,
     Video: "Video5",
     Sample_status: "Active"
   },
@@ -216,7 +205,7 @@ const sampleData = [
     Rock_Type: "Осадочный",
     Height: "6.69 cm/2.63 in",
     Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/10/image",
+    Image: coal,
     Video: "Video10",
     Sample_status: "Active"
   },
@@ -229,21 +218,8 @@ const sampleData = [
     Rock_Type: "Осадочный",
     Height: "6.04 cm/2.38 in",
     Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/19/image",
+    Image: coal,
     Video: "Video19",
-    Sample_status: "Active"
-  },
-  {
-    Id_sample: 20,
-    Name: "Otis Peak",
-    Type: "Камень",
-    Date_Sealed: "2023-07-23T00:00:00Z",
-    Sol_Sealed: 832,
-    Rock_Type: "Осадочный",
-    Height: "5.77 cm/2.27 in",
-    Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/20/image",
-    Video: "Video20",
     Sample_status: "Active"
   },
   {
@@ -255,7 +231,7 @@ const sampleData = [
     Rock_Type: "Осадочный",
     Height: "6 cm/2.36 in",
     Current_Location: "Perseverance Rover",
-    Image: "http://localhost:9000/images-bucket/sample/21/image",
+    Image: coal,
     Video: "https://mars.nasa.gov/embed/27520/",
     Sample_status: "Active"
   },
@@ -268,7 +244,7 @@ const sampleData = [
     Rock_Type: "n/a",
     Height: "n/a",
     Current_Location: "Sample Depot",
-    Image: "http://localhost:9000/images-bucket/sample/1/image",
+    Image: coal,
     Video: "Video1",
     Sample_status: "Active"
   }
