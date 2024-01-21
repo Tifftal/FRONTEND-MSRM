@@ -132,7 +132,7 @@ const Samples: FC = () => {
                                                 Узнать больше
                                             </NavLink>
                                         </Button>
-                                        <button className='bagBtn'><img src='bag.png' /></button>
+                                        {/* <button className='bagBtn'><img src='bag.png' /></button> */}
                                     </div>
                                 </Card.Body>
                             </Card>

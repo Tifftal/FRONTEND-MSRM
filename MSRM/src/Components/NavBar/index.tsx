@@ -19,7 +19,7 @@ const NavBar: FC = () => {
                     <Nav className="me-auto">
                         <Nav.Link><NavLink className="link" to='/FRONTEND-MSRM/'>Главная</NavLink></Nav.Link>
                         <Nav.Link><NavLink className="link" to='/FRONTEND-MSRM/samples'>Образцы</NavLink></Nav.Link>
-                        <Nav.Link><NavLink className="link" to='/FRONTEND-MSRM/'>Мои заказы</NavLink></Nav.Link>
+                        {/* <Nav.Link><NavLink className="link" to='/FRONTEND-MSRM/'>Мои заказы</NavLink></Nav.Link> */}
                     </Nav>
                     
                 </Navbar.Collapse>
